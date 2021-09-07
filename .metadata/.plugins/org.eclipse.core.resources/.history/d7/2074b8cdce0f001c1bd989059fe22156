@@ -20,15 +20,10 @@ public class Main {
 		Transaction transaction=session.beginTransaction();
 		//inserting a employee row
 		Employee employee1= new Employee(101, "ramesh", 55000.00);
-		Employee employee2= new Employee(107, "suresh", 65000.00);
 		session.save(employee1);
-		session.save(employee2);
 		//to get the deatils
 		Employee employee =(Employee)session.get(Employee.class, 101);
 		System.out.println(employee);
-		Employee employe =(Employee)session.get(Employee.class, 107);
-		System.out.println(employe);
-		
 				
 		
 		
